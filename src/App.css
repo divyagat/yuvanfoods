@@ -1,0 +1,11 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+    @import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Tagesschrift&display=swap');
+}
+body{
+    /* font-family: "Cascadia Mono", sans-serif; */
+    font-family: "Cascadia Mono", sans-serif;
+   
+}
