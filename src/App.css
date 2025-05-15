@@ -157,6 +157,29 @@ nav .allCatTab .text{
     font-weight: 600;
 }
 
-nav .allCatTab svg{
+nav .allCatTab .icon1 svg{
     font-size: 22px;
+}
+nav .allCatTab .icon1 svg{
+    font-size: 22px;
+}
+
+nav .navPart2 ul{
+    margin-bottom: 0px;
+}
+nav .navPart2 ul li a{
+    font-size: 15px ;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    padding: 8px 22px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 25px;
+}
+nav .navPart2 ul li a:hover{
+    background: #f0faff;
+    color: #2bbef9;
 }
