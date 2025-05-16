@@ -5,11 +5,8 @@ import Button from '@mui/material/Button';
 import { FaSearch } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { useState } from "react";
-import Slide from '@mui/material/Slide';
+// import Slide from '@mui/material/Slide';
 
-const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
 
 const CountryDropdown = () => {
     const [isOpenModel, setisOpenModel]= useState(false);
