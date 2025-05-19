@@ -5,10 +5,9 @@ import SearchBox from './SearchBox';
 import Navigation from './Navigation';
 import { FiUser, FiShoppingCart } from 'react-icons/fi';
 import { MyContext } from '../../App';
-
 function Header() {
   const context = useContext(MyContext);
-
+  
   return (
     <div className="headerWrapper">
       <div className="top-strip">

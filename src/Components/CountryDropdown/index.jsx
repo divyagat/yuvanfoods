@@ -1,12 +1,9 @@
 import { useState, useContext, useEffect } from "react";
 import { FaAngleDown, FaSearch } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
-import { useState } from "react";
-import Slide from '@mui/material/Slide';
-
-const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
+import Dialog from "@mui/material/Dialog";
+import Button from "@mui/material/Button";
+import { MyContext } from "../../App";
 
 const CountryDropdown = () => {
   const [isOpenModel, setIsOpenModel] = useState(false);
@@ -52,7 +49,6 @@ const CountryDropdown = () => {
       <Dialog open={isOpenModel} onClose={() => setIsOpenModel(false)} className="locationModal">
         <h4 className="mb-0">Choose your Delivery Location</h4>
         <p>Enter your address and we will specify the offer for your area.</p>
-
         <Button className="close_" onClick={() => setIsOpenModel(false)}>
           <IoClose />
         </Button>
@@ -84,4 +80,4 @@ const CountryDropdown = () => {
   );
 };
 
-export default CountryDropdown;
+export default CountryDropdown;   
