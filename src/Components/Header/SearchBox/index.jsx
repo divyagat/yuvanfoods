@@ -1,6 +1,5 @@
 import Button from '@mui/material/Button';
 import { FaSearch } from "react-icons/fa";
-
 const SearchBox = () => {
   return (
     <>
