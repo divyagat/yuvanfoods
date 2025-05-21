@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './Components/Header/index';
 import axios from 'axios';
+import Home from './Pages/Home/index';
 const MyContext = createContext();
 function App() {
   const [countryList, setCountryList] = useState([]); // ✅ Fix: 'const' instead of 'Const'
@@ -32,6 +33,7 @@ const [selectedCountry, setselectedCountry] = useState("");
         <Header />
         <Routes>
           {/* Define your routes here */}
+          <Route path='/' element={<Home/>}/>
         </Routes>
       </MyContext.Provider>
     </BrowserRouter>

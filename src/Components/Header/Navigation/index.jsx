@@ -27,14 +27,23 @@ const Navigation = () => {
               {/* Sidebar Category List */}
               <div className={`sidebarNav ${isOpenSidebarval ? 'open' : ''}`}>
                 <ul>
+                  <li>
+                    <Link to="/"><Button>Men</Button></Link>
+                    <ul className="submenu1">
+                      <li><Link to="/"><Button>Clothing</Button></Link></li>
+                      <li><Link to="/"><Button>Footwear</Button></Link></li>
+                      <li><Link to="/"><Button>Watches</Button></Link></li>
+                    </ul>
+                  </li>
                   <li><Link to="/"><Button>Home</Button></Link></li>
-                  <li><Link to="/"><Button>Men</Button></Link></li>
                   <li><Link to="/"><Button>Women</Button></Link></li>
                   <li><Link to="/"><Button>Beauty</Button></Link></li>
                   <li><Link to="/"><Button>Kids</Button></Link></li>
                   <li><Link to="/"><Button>Gift</Button></Link></li>
                 </ul>
               </div>
+
+
             </div>
           </div>
 
@@ -42,6 +51,12 @@ const Navigation = () => {
           <div className="col-sm-9 navPart2 d-flex align-items-center">
             <ul className="list list-inline mx-auto mb-0">
               <li className="list-inline-item"><Link to="/"><Button>Home</Button></Link></li>
+              <Link to="/"><Button>Men</Button></Link>
+              <div className="submenu shadow position-relative">
+                <Link to="/"><Button>Clothing</Button></Link>
+                <Link to="/"><Button>Footwear</Button></Link>
+                <Link to="/"><Button>Watches</Button></Link>
+              </div>
               <li className="list-inline-item position-relative">
                 <Link to="/"><Button>Men</Button></Link>
                 <div className="submenu shadow">
@@ -50,12 +65,48 @@ const Navigation = () => {
                   <Link to="/"><Button>Watches</Button></Link>
                 </div>
               </li>
-              <li className="list-inline-item"><Link to="/">Women</Link></li>
-              <li className="list-inline-item"><Link to="/">Beauty</Link></li>
-              <li className="list-inline-item"><Link to="/">Kids</Link></li>
-              <li className="list-inline-item"><Link to="/">Gift</Link></li>
-              <li className="list-inline-item"><Link to="/">Blog</Link></li>
-              <li className="list-inline-item"><Link to="/">Contact</Link></li>
+              <li className="list-inline-item "><Link to="/">Women</Link>
+                <div className="submenu shadow">
+                  <Link to="/"><Button>Clothing</Button></Link>
+                  <Link to="/"><Button>Footwear</Button></Link>
+                  <Link to="/"><Button>Watches</Button></Link>
+                </div>
+              </li>
+              <li className="list-inline-item position-relative"><Link to="/">Beauty</Link>
+                <div className="submenu shadow">
+                  <Link to="/"><Button>Clothing</Button></Link>
+                  <Link to="/"><Button>Footwear</Button></Link>
+                  <Link to="/"><Button>Watches</Button></Link>
+                </div>
+              </li>
+              <li className="list-inline-item position-relative"><Link to="/">Kids</Link>
+                <div className="submenu shadow">
+                  <Link to="/"><Button>Clothing</Button></Link>
+                  <Link to="/"><Button>Footwear</Button></Link>
+                  <Link to="/"><Button>Watches</Button></Link>
+                </div>
+              </li>
+              <li className="list-inline-item position-relative"><Link to="/">Gift</Link>
+                <div className="submenu shadow">
+                  <Link to="/"><Button>Clothing</Button></Link>
+                  <Link to="/"><Button>Footwear</Button></Link>
+                  <Link to="/"><Button>Watches</Button></Link>
+                </div>
+              </li>
+              <li className="list-inline-item position-relative"><Link to="/">Blog</Link>
+                <div className="submenu shadow">
+                  <Link to="/"><Button>Clothing</Button></Link>
+                  <Link to="/"><Button>Footwear</Button></Link>
+                  <Link to="/"><Button>Watches</Button></Link>
+                </div>
+              </li>
+              <li className="list-inline-item position-relative"><Link to="/">Contact</Link>
+                <div className="submenu shadow">
+                  <Link to="/"><Button>Clothing</Button></Link>
+                  <Link to="/"><Button>Footwear</Button></Link>
+                  <Link to="/"><Button>Watches</Button></Link>
+                </div>
+              </li>
             </ul>
           </div>
         </div>

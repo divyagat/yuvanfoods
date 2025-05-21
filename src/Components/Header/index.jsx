@@ -5,6 +5,10 @@ import SearchBox from './SearchBox';
 import Navigation from './Navigation';
 import { FiUser, FiShoppingCart } from 'react-icons/fi';
 import { MyContext } from '../../App';
+import Button from '@mui/material/Button';
+
+
+
 function Header() {
   const context = useContext(MyContext);
   
@@ -33,16 +37,16 @@ function Header() {
               {context.countryList.length !== 0 && <CountryDropdown />}
               <SearchBox />
               <div className="d-flex align-items-center part3 mx-auto ms-4">
-                <button className="circle">
+                <Button className="circle">
                   <FiUser />
-                </button>
+                </Button>
                 <div className="ml-auto cartTab d-flex align-items-center">
                   <span className="price mt-2">$3.29</span>
 
                   <div className="position-relative ml-2 ms-3">
-                    <button className="circle">
+                    <Button className="circle">
                       <FiShoppingCart />
-                    </button>
+                    </Button>
                     <span className="count d-flex align-items-center justify-content-center">
                       1
                     </span>
