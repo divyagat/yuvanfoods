@@ -4,9 +4,17 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
 
 
-.cursor{cursor: pointer}
-.text-light1{color: #979393 !important;}
-.text-sml{font-size: 14px;}
+.cursor {
+    cursor: pointer
+}
+
+.text-light1 {
+    color: #979393 !important;
+}
+
+.text-sml {
+    font-size: 14px;
+}
 
 * {
     margin: 0px;
@@ -48,7 +56,7 @@
 .headerWrapper .header {
     width: 100%;
     height: auto;
-    padding: 15px 0px;  
+    padding: 15px 0px;
 }
 
 .logoWrapper img {
@@ -170,7 +178,7 @@ nav .allCatTab {
     padding: 8px 20px;
     border-radius: 30px;
     border: none;
-    
+
 }
 
 nav .allCatTab * {
@@ -258,16 +266,18 @@ nav .navPart2 ul li a:hover {
     color: #2bbef9;
 }
 
-nav .navPart2 ul li{
+nav .navPart2 ul li {
     position: relative;
     padding-bottom: 15px;
 }
-nav .navPart2 ul li:hover .submenu{
-            opacity: 1;
-            visibility: inherit;
-            top: 100%;
+
+nav .navPart2 ul li:hover .submenu {
+    opacity: 1;
+    visibility: inherit;
+    top: 100%;
 }
-nav .navPart2 ul li .submenu{
+
+nav .navPart2 ul li .submenu {
     z-index: 100;
     position: absolute;
     top: 150%;
@@ -278,78 +288,100 @@ nav .navPart2 ul li .submenu{
     visibility: hidden;
     transition: all 0.2s ease-in-out;
 }
-nav .navPart2 ul li .submenu a{
+
+nav .navPart2 ul li .submenu a {
     display: block;
     width: 100%;
 
 }
-nav .navPart2 ul li .submenu a button{
+
+nav .navPart2 ul li .submenu a button {
     width: 100%;
     justify-content: flex-start;
     border-radius: 0px;
     text-transform: capitalize;
     font-weight: 600;
 }
-nav .navPart2 ul li .submenu a button:hover{
+
+nav .navPart2 ul li .submenu a button:hover {
     background: #f1f1f1;
     width: 100%;
 }
 
 nav .navPart1 {
-  max-width: 20%;
-  flex: 0 0 20%;
+    max-width: 20%;
+    flex: 0 0 20%;
 }
 
 nav .navPart1 .catWrapper {
-  position: relative;
+    position: relative;
 }
 
 nav .navPart1 .catWrapper .sidebarNav {
-  width: 100%;
-  height: 0px;
-  background: #fff;
-  position: absolute;
-  top: 120%;
-  left: 0px;
-  border: 1px solid black;
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
-  visibility: hidden;
-  overflow: hidden;
-  z-index: 10;
+    width: 100%;
+    height: 0px;
+    background: #fff;
+    position: absolute;
+    top: 120%;
+    left: 0px;
+    border: 1px solid black;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: 10;
 }
 
 nav .navPart1 .catWrapper .sidebarNav.open {
-  height: auto;
-  opacity: 1;
-  visibility: visible;
-  padding: 10px 0;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    padding: 10px 0;
 }
 
-nav .navPart1 .catWrapper .sidebarNav ul li{position: relative;}
-nav .navPart1 .catWrapper .sidebarNav ul li .submenu1{position: absolute; top: 0px; left: 101%;
-width: 200px ; height: 100%; background-color: #fff; z-index: 100; opacity: 0; visibility: hidden;
-transition: all 0.2s ease-in-out; border-left: 1px solid rgba(0,0,0,0.1);}
+nav .navPart1 .catWrapper .sidebarNav ul li {
+    position: relative;
+}
 
-nav .navPart1 .catWrapper .sidebarNav ul li:hover .submenu1 {opacity: 1; visibility: inherit;
-left: 100%; padding: 20px;}
+nav .navPart1 .catWrapper .sidebarNav ul li .submenu1 {
+    position: absolute;
+    top: 0px;
+    left: 101%;
+    width: 200px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
 
-nav .navPart1 .catWrapper .sidebarNav ul li:hover .submenu1 button{border-radius: 0px !important;}
+nav .navPart1 .catWrapper .sidebarNav ul li:hover .submenu1 {
+    opacity: 1;
+    visibility: inherit;
+    left: 100%;
+    padding: 20px;
+}
+
+nav .navPart1 .catWrapper .sidebarNav ul li:hover .submenu1 button {
+    border-radius: 0px !important;
+}
 
 
 .submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #fff;
-  display: none;
-  padding: 10px;
-  border: 1px solid #ddd;
-  z-index: 10;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    display: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    z-index: 10;
 }
 
 li.position-relative:hover .submenu {
-  display: block;
+    display: block;
 }
 
 
@@ -358,122 +390,158 @@ li.position-relative:hover .submenu {
 
 } */
 
-nav .navPart1 .catWrapper .sidebarNav  ul li{
+nav .navPart1 .catWrapper .sidebarNav ul li {
     width: 100%;
     padding: 15px 10px;
     list-style: none;
 }
-nav .navPart1 .catWrapper .sidebarNav  ul li button{
+
+nav .navPart1 .catWrapper .sidebarNav ul li button {
     color: #000;
     justify-content: flex-start;
     width: 100%;
     text-transform: capitalize;
 }
-nav .navPart1 .catWrapper .sidebarNav  ul li button:hover{
+
+nav .navPart1 .catWrapper .sidebarNav ul li button:hover {
     background: transparent;
 }
 
-.homeProducts{padding: 25px 0px; width: 100%;}
-.homeProducts .banner{width: 100%; border-radius: 7px;border: 1px solid #000; overflow: hidden;height: 70vh;}
-.homeProducts .banner img{
+.homeProducts {
+    padding: 25px 0px;
+    width: 100%;
+}
+
+.homeProducts .banner {
+    width: 100%;
+    border-radius: 7px;
+    border: 1px solid #000;
+    overflow: hidden;
     height: 70vh;
 }
 
-.productRow .hd{ font-size: 25px; font-weight: 600;}
-.homeBannerSection{overflow: hidden;}
+.homeProducts .banner img {
+    height: 70vh;
+}
 
-.viewAllBtn{padding: 5px 25px !important; background: #fff; border: 1px solid rgba(0,0,0,0.1)
-!important; border-radius: 30px !important; color: #4c4a4a !important; font-weight: 600;
-text-transform: capitalize !important;}
+.productRow .hd {
+    font-size: 25px;
+    font-weight: 600;
+}
 
-.viewAllBtn svg{font-size: 20px;}
+.homeBannerSection {
+    overflow: hidden;
+}
 
-.productItem{width: 100%; height: auto; border: 1px solid rgba(0,0,0,0.1);}
+.viewAllBtn {
+    padding: 5px 25px !important;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-radius: 30px !important;
+    color: #4c4a4a !important;
+    font-weight: 600;
+    text-transform: capitalize !important;
+}
+
+.viewAllBtn svg {
+    font-size: 20px;
+}
+
+.productItem {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
 
 .price {
-  font-size: 1rem;
-  margin-top: 8px;
+    font-size: 1rem;
+    margin-top: 8px;
 }
 
 .price span {
-  margin-right: 8px;
+    margin-right: 8px;
 }
-.rating{
+
+.rating {
     color: yellow;
 }
+
 .product_row .productItem {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    min-height: 420px;
 }
 
 .product_row .imgWrapper {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .product_row .imgWrapper img {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .product_row .productContent {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .product_row .productContent h5.title {
-  font-size: 16px;
-  font-weight: 600;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .product_row .price {
-  margin-top: 8px;
+    margin-top: 8px;
 }
 
 .product_row button {
-  align-self: flex-start;
-  background-color: #f57224;
-  color: #fff;
-  border: none;
-  transition: 0.3s;
+    align-self: flex-start;
+    background-color: #f57224;
+    color: #fff;
+    border: none;
+    transition: 0.3s;
 }
 
 .product_row button:hover {
-  background-color: #d35400;
+    background-color: #d35400;
 }
 
 .product_row .rating svg {
-  font-size: 18px;
-  color: gold;
-}
-.swiper-slide {
-  height: auto !important;
+    font-size: 18px;
+    color: gold;
 }
 
-.SlidBtn{
+.swiper-slide {
+    height: auto !important;
+}
+
+.SlidBtn {
     background-color: #ccc;
     border-color: blue;
 
     color: blue;
 }
-.productItem{
+
+.productItem {
     position: relative;
 }
-.badge{
+
+.badge {
     position: absolute;
     top: 5px;
     left: 5px;
@@ -481,49 +549,70 @@ text-transform: capitalize !important;}
     border-radius: none;
 
 }
+
 .productItem .imgWrapper {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 .productItem .actions {
-  position: absolute;
-  top: 10px;
-  right: -10px;
-  width: 50px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  z-index: 5; 
-  transition: all 0.5s;
-}
-.productItem .actions Button{
-      background:white ;
-      color: blue;
-       align-items: center; justify-content: center;
-    min-width: 40px !important; height: 40px !important; width: 40px !important; border: 1px solid
-    rgba(215, 76, 76, 0.1) !important; border-radius: 50% !important; background: white !important;
-box-shadow: 0 px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 /24%) !important; transition: all
-0.0s !important;}
-
-.productItem .actions Button svg{
-    color: #000 !important; opacity: 0.8; pointer-events: none; font-size: 15px !important;
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    width: 50px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 5;
+    transition: all 0.5s;
 }
 
-.productItem .actions Button :hover{
-    background: rgb(25, 25, 143);
+.productItem .actions Button {
+    background: white;
+    color: blue;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px !important;
+    height: 40px !important;
+    width: 40px !important;
+    border: 1px solid rgba(215, 76, 76, 0.1) !important;
+    border-radius: 50% !important;
+    box-shadow: 0 px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 /24%) !important;
+    transition: all 0.0s !important;
 }
-.productItem .actions Button svg :hover{
+
+.productItem .actions Button svg {
+    color: #000 !important;
+    opacity: 0.8;
+    pointer-events: none;
+    font-size: 15px !important;
+}
+
+.productItem .actions Button:hover {
+    background: rgb(45, 45, 202);
+}
+
+.productItem .actions Button svg:hover{
     color: #fff !important;
 }
 
-.productItem .imgWrapper{overflow: hidden;}
-.productItem .imgWrapper img{transition: all 0.3s ease-in-out;}
-.productItem .imgWrapper:hover .actions{ opacity: 1 ; right: 10px;}
-.productItem .imgWrapper:hover img{transform: scale(1.1);}
+.productItem .imgWrapper {
+    overflow: hidden;
+}
 
+.productItem .imgWrapper img {
+    transition: all 0.3s ease-in-out;
+}
 
 .productItem .imgWrapper:hover .actions {
-  opacity: 1;
+    opacity: 1;
+    right: 10px;
+}
+
+.productItem .imgWrapper:hover img {
+    transform: scale(1.1);
 }
 
 
+.productItem .imgWrapper:hover .actions {
+    opacity: 1;
+}

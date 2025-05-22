@@ -80,207 +80,209 @@ const ProductItem = () => {
 
     return (
         <>
-          
-             <div className=" productRow">
-                            <div className="d-flex align-items-center mb-3">
-                                <div className="info w-75">
-                                    <h3 className="mb-0 hd">BEST SELLERS</h3>
-                                    <p className="text-light1 text-sml mb-0">
-                                        Do not miss the current offers until the end of March.
-                                    </p>
+
+            <div className=" productRow">
+                <div className="d-flex align-items-center mb-3">
+                    <div className="info w-75">
+                        <h3 className="mb-0 hd">BEST SELLERS</h3>
+                        <p className="text-light1 text-sml mb-0">
+                            Do not miss the current offers until the end of March.
+                        </p>
+                    </div>
+                    <Button className="viewAllBtn ml-auto">
+                        View All <GoArrowRight />
+                    </Button>
+                </div>
+
+                <div className="product_row w-100">
+                    <Swiper
+                        modules={[Navigation, Pagination, Autoplay]}
+                        navigation
+                        // pagination={{ clickable: true }}
+                        autoplay={{ delay: 1800 }}
+                        spaceBetween={20}
+                        breakpoints={{
+                            0: { slidesPerView: 1 },
+                            576: { slidesPerView: 2 },
+                            768: { slidesPerView: 3 },
+                            992: { slidesPerView: 4 },
+                        }}
+                    >
+                        {productData.map((item, idx) => (
+                            <SwiperSlide key={idx}>
+                                <div className="item productItem">
+
+
+                                    <div className="imgWrapper position-relative">
+                                        <img src={item.img} alt={`Product ${idx}`} className="w-100" />
+                                        <div className="actions">
+                                            <Button>
+                                                <TfiFullscreen />
+                                            </Button><br />
+                                            <Button><IoMdHeartEmpty style={{ fontsize: '20px' }} /></Button>
+                                        </div>
+                                        <span className="badge">28%</span>
+                                    </div>
+
+
+                                    <div className="productContent p-4">
+
+
+                                        <h5 className="title">{item.title}</h5>
+                                        <p className="subtitle">{item.subtitle}</p>
+                                        <div className="rating">
+                                            {[1, 2, 3, 4, 5].map((star) =>
+                                                star <= item.rating ? (
+                                                    <StarIcon key={star} className="filledStar" />
+                                                ) : (
+                                                    <StarBorderIcon key={star} className="emptyStar" />
+                                                )
+                                            )}
+                                        </div>
+                                        <div className="stock">
+                                            {item.inStock ? (
+                                                <span className="inStock"><CheckCircleIcon /> In Stock</span>
+                                            ) : (
+                                                <span className="outOfStock"><CancelIcon /> Out of Stock</span>
+                                            )}
+                                        </div>
+                                        <div className="price">
+                                            {(idx >= 0 && idx <= 7) && item.originalPrice && item.discountedPrice ? (
+                                                <>
+                                                    <span style={{ textDecoration: "line-through", color: "#888", marginRight: "8px" }}>
+                                                        {item.originalPrice}
+                                                    </span>
+                                                    <span style={{ color: "red", fontWeight: "bold" }}>
+                                                        {item.discountedPrice}
+                                                    </span>
+                                                </>
+                                            ) : (
+                                                <span style={{ fontWeight: "bold" }}>
+                                                    {item.discountedPrice}
+                                                </span>
+                                            )}
+                                        </div>
+                                        <Button
+                                            className="rounded-5 SlidBtn px-4 py-1 mt-4 "
+                                            style={{
+                                                backgroundColor: "white",
+                                                borderColor: "blue",
+                                                border: "1px solid blue",
+                                                color: "blue",
+                                                width: "160px",
+                                            }}
+                                        > {item.button}
+                                        </Button>
+                                    </div>
                                 </div>
-                                <Button className="viewAllBtn ml-auto">
-                                    View All <GoArrowRight />
-                                </Button>
-                            </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
 
-                            <div className="product_row w-100">
-                                <Swiper
-                                    modules={[Navigation, Pagination, Autoplay]}
-                                    navigation
-                                    // pagination={{ clickable: true }}
-                                    autoplay={{ delay: 1800 }}
-                                    spaceBetween={20}
-                                    breakpoints={{
-                                        0: { slidesPerView: 1 },
-                                        576: { slidesPerView: 2 },
-                                        768: { slidesPerView: 3 },
-                                        992: { slidesPerView: 4 },
-                                    }}
-                                >
-                                    {productData.map((item, idx) => (
-                                        <SwiperSlide key={idx}>
-                                            <div className="item productItem">
-
-
-                                                <div className="imgWrapper position-relative">
-                                                    <img src={item.img} alt={`Product ${idx}`} className="w-100" />
-                                                    <div className="actions">
-                                                        <Button>
-                                                            <TfiFullscreen />
-                                                        </Button><br />
-                                                        <Button><IoMdHeartEmpty style={{ fontsize: '20px' }} /></Button>
-                                                    </div>
-                                                    <span className="badge">28%</span>
-                                                </div>
-
-
-                                                <div className="productContent p-4">
-
-
-                                                    <h5 className="title">{item.title}</h5>
-                                                    <p className="subtitle">{item.subtitle}</p>
-                                                    <div className="rating">
-                                                        {[1, 2, 3, 4, 5].map((star) =>
-                                                            star <= item.rating ? (
-                                                                <StarIcon key={star} className="filledStar" />
-                                                            ) : (
-                                                                <StarBorderIcon key={star} className="emptyStar" />
-                                                            )
-                                                        )}
-                                                    </div>
-                                                    <div className="stock">
-                                                        {item.inStock ? (
-                                                            <span className="inStock"><CheckCircleIcon /> In Stock</span>
-                                                        ) : (
-                                                            <span className="outOfStock"><CancelIcon /> Out of Stock</span>
-                                                        )}
-                                                    </div>
-                                                    <div className="price">
-                                                        {(idx >= 0 && idx <= 7) && item.originalPrice && item.discountedPrice ? (
-                                                            <>
-                                                                <span style={{ textDecoration: "line-through", color: "#888", marginRight: "8px" }}>
-                                                                    {item.originalPrice}
-                                                                </span>
-                                                                <span style={{ color: "red", fontWeight: "bold" }}>
-                                                                    {item.discountedPrice}
-                                                                </span>
-                                                            </>
-                                                        ) : (
-                                                            <span style={{ fontWeight: "bold" }}>
-                                                                {item.discountedPrice}
-                                                            </span>
-                                                        )}
-                                                    </div>
-                                                    <Button
-                                                        className="rounded-5 SlidBtn px-4 py-1 mt-4 "
-                                                        style={{
-                                                            backgroundColor: "white",
-                                                            borderColor: "blue",
-                                                            border: "1px solid blue",
-                                                            color: "blue",
-                                                            width: "160px",
-                                                        }}
-                                                    > {item.button}
-                                                    </Button>
-                                                </div>
-                                            </div>
-                                        </SwiperSlide>
-                                    ))}
-                                </Swiper>
-                            </div>
-
-                              <div className="col-md-9 productRow w-100">
-                            <div className="d-flex align-items-center mb-3">
-                                <div className="info ">
-                                    <h3 className="mb-0 hd">NEW PRODUCTS</h3>
-                                    <p className="text-light1 text-sml mb-0">
-                                        New Products with updated stocks
-                                    </p>
-                                </div>
-                                <Button className="viewAllBtn ml-auto">
-                                    View All <GoArrowRight />
-                                </Button>
-                            </div>
-
-                            <div className="product_row w-100">
-                                <Swiper
-                                    modules={[Navigation, Pagination, Autoplay]}
-                                    navigation
-                                    // pagination={{ clickable: true }}
-                                    autoplay={{ delay: 1800 }}
-                                    spaceBetween={20}
-                                    breakpoints={{
-                                        0: { slidesPerView: 1 },
-                                        576: { slidesPerView: 2 },
-                                        768: { slidesPerView: 3 },
-                                        992: { slidesPerView: 4 },
-                                    }}
-                                >
-                                    {productData.map((item, idx) => (
-                                        <SwiperSlide key={idx}>
-                                            <div className="item productItem">
-
-
-                                                <div className="imgWrapper position-relative">
-                                                    <img src={item.img} alt={`Product ${idx}`} className="w-100" />
-                                                    <div className="actions">
-                                                        <Button>
-                                                            <TfiFullscreen />
-                                                        </Button><br />
-                                                        <Button><IoMdHeartEmpty style={{ fontsize: '20px' }} /></Button>
-                                                    </div>
-                                                    <span className="badge">28%</span>
-                                                </div>
-
-
-                                                <div className="productContent p-4">
-
-
-                                                    <h5 className="title">{item.title}</h5>
-                                                    <p className="subtitle">{item.subtitle}</p>
-                                                    <div className="rating">
-                                                        {[1, 2, 3, 4, 5].map((star) =>
-                                                            star <= item.rating ? (
-                                                                <StarIcon key={star} className="filledStar" />
-                                                            ) : (
-                                                                <StarBorderIcon key={star} className="emptyStar" />
-                                                            )
-                                                        )}
-                                                    </div>
-                                                    <div className="stock">
-                                                        {item.inStock ? (
-                                                            <span className="inStock"><CheckCircleIcon /> In Stock</span>
-                                                        ) : (
-                                                            <span className="outOfStock"><CancelIcon /> Out of Stock</span>
-                                                        )}
-                                                    </div>
-                                                    <div className="price">
-                                                        {(idx >= 0 && idx <= 7) && item.originalPrice && item.discountedPrice ? (
-                                                            <>
-                                                                <span style={{ textDecoration: "line-through", color: "#888", marginRight: "8px" }}>
-                                                                    {item.originalPrice}
-                                                                </span>
-                                                                <span style={{ color: "red", fontWeight: "bold" }}>
-                                                                    {item.discountedPrice}
-                                                                </span>
-                                                            </>
-                                                        ) : (
-                                                            <span style={{ fontWeight: "bold" }}>
-                                                                {item.discountedPrice}
-                                                            </span>
-                                                        )}
-                                                    </div>
-                                                    <Button
-                                                        className="rounded-5 SlidBtn px-4 py-1 mt-4 "
-                                                        style={{
-                                                            backgroundColor: "white",
-                                                            borderColor: "blue",
-                                                            border: "1px solid blue",
-                                                            color: "blue",
-                                                            width: "160px",
-
-                                                        }}
-                                                    > {item.button}
-                                                    </Button>
-                                                </div>
-                                            </div>
-                                        </SwiperSlide>
-                                    ))}
-                                </Swiper>
-                            </div>
+                <div className="col-md-9 productRow w-100 ">
+                    <div className="d-flex align-items-center justify-content-between ">
+                        <div className="info ">
+                            <h3 className="mt-5 hd">NEW PRODUCTS</h3>
+                            <p className="text-light1 text-sml mb-0">
+                                New Products with updated stocks
+                            </p>
                         </div>
-                        </div>
+                      <div>
+                          <Button className="viewAllBtn ml-auto">
+                            View All <GoArrowRight />
+                        </Button>
+                      </div>
+                    </div>
+
+                    <div className="product_row w-100 mt-3">
+                        <Swiper
+                            modules={[Navigation, Pagination, Autoplay]}
+                            navigation
+                            // pagination={{ clickable: true }}
+                            autoplay={{ delay: 1800 }}
+                            spaceBetween={20}
+                            breakpoints={{
+                                0: { slidesPerView: 1 },
+                                576: { slidesPerView: 2 },
+                                768: { slidesPerView: 3 },
+                                992: { slidesPerView: 4 },
+                            }}
+                        >
+                            {productData.map((item, idx) => (
+                                <SwiperSlide key={idx}>
+                                    <div className="item productItem">
+
+
+                                        <div className="imgWrapper position-relative">
+                                            <img src={item.img} alt={`Product ${idx}`} className="w-100" />
+                                            <div className="actions">
+                                                <Button>
+                                                    <TfiFullscreen />
+                                                </Button><br />
+                                                <Button><IoMdHeartEmpty style={{ fontsize: '20px' }} /></Button>
+                                            </div>
+                                            <span className="badge">28%</span>
+                                        </div>
+
+
+                                        <div className="productContent p-4">
+
+
+                                            <h5 className="title">{item.title}</h5>
+                                            <p className="subtitle">{item.subtitle}</p>
+                                            <div className="rating">
+                                                {[1, 2, 3, 4, 5].map((star) =>
+                                                    star <= item.rating ? (
+                                                        <StarIcon key={star} className="filledStar" />
+                                                    ) : (
+                                                        <StarBorderIcon key={star} className="emptyStar" />
+                                                    )
+                                                )}
+                                            </div>
+                                            <div className="stock">
+                                                {item.inStock ? (
+                                                    <span className="inStock"><CheckCircleIcon /> In Stock</span>
+                                                ) : (
+                                                    <span className="outOfStock"><CancelIcon /> Out of Stock</span>
+                                                )}
+                                            </div>
+                                            <div className="price">
+                                                {(idx >= 0 && idx <= 7) && item.originalPrice && item.discountedPrice ? (
+                                                    <>
+                                                        <span style={{ textDecoration: "line-through", color: "#888", marginRight: "8px" }}>
+                                                            {item.originalPrice}
+                                                        </span>
+                                                        <span style={{ color: "red", fontWeight: "bold" }}>
+                                                            {item.discountedPrice}
+                                                        </span>
+                                                    </>
+                                                ) : (
+                                                    <span style={{ fontWeight: "bold" }}>
+                                                        {item.discountedPrice}
+                                                    </span>
+                                                )}
+                                            </div>
+                                            <Button
+                                                className="rounded-5 SlidBtn px-4 py-1 mt-4 "
+                                                style={{
+                                                    backgroundColor: "white",
+                                                    borderColor: "blue",
+                                                    border: "1px solid blue",
+                                                    color: "blue",
+                                                    width: "160px",
+
+                                                }}
+                                            > {item.button}
+                                            </Button>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
+                </div>
+            </div>
 
         </>
     )
