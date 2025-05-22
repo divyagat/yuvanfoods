@@ -1,7 +1,6 @@
 
 import React from "react";
-import HomeBanner from "../../Components/HomeBanner";
-import banner1 from "../../assets/images/banner1.jpg";
+
 import Button from "@mui/material/Button";
 import { GoArrowRight } from "react-icons/go";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -81,16 +80,8 @@ const ProductItem = () => {
 
     return (
         <>
-            <HomeBanner />
-            <section className="homeProducts">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-3">
-                            <div className="banner">
-                                <img src={banner1} alt="Dry Petha" className="cursor w-100" />
-                            </div>
-                        </div>
-                        <div className="col-md-9 productRow">
+          
+             <div className=" productRow">
                             <div className="d-flex align-items-center mb-3">
                                 <div className="info w-75">
                                     <h3 className="mb-0 hd">BEST SELLERS</h3>
@@ -106,7 +97,7 @@ const ProductItem = () => {
                             <div className="product_row w-100">
                                 <Swiper
                                     modules={[Navigation, Pagination, Autoplay]}
-                                    navigation  
+                                    navigation
                                     // pagination={{ clickable: true }}
                                     autoplay={{ delay: 1800 }}
                                     spaceBetween={20}
@@ -128,7 +119,7 @@ const ProductItem = () => {
                                                         <Button>
                                                             <TfiFullscreen />
                                                         </Button><br />
-                                                        <Button><IoMdHeartEmpty  style={{fontsize:'20px'}}/></Button>
+                                                        <Button><IoMdHeartEmpty style={{ fontsize: '20px' }} /></Button>
                                                     </div>
                                                     <span className="badge">28%</span>
                                                 </div>
@@ -172,14 +163,13 @@ const ProductItem = () => {
                                                         )}
                                                     </div>
                                                     <Button
-                                                        className="rounded-5 SlidBtn px-4 py-1 mt-4 ms-1"
+                                                        className="rounded-5 SlidBtn px-4 py-1 mt-4 "
                                                         style={{
                                                             backgroundColor: "white",
                                                             borderColor: "blue",
                                                             border: "1px solid blue",
                                                             color: "blue",
-                                                            width: "170px",
-
+                                                            width: "160px",
                                                         }}
                                                     > {item.button}
                                                     </Button>
@@ -189,30 +179,13 @@ const ProductItem = () => {
                                     ))}
                                 </Swiper>
                             </div>
-                        </div>
 
-
-                        
-                    </div>
-                </div>
-            </section>
-
-
-
-             <section className="homeProducts">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-3">
-                            <div className="banner1">
-                               
-                            </div>
-                        </div>
-                        <div className="col-md-9 productRow">
+                              <div className="col-md-9 productRow w-100">
                             <div className="d-flex align-items-center mb-3">
-                                <div className="info w-75">
+                                <div className="info ">
                                     <h3 className="mb-0 hd">NEW PRODUCTS</h3>
                                     <p className="text-light1 text-sml mb-0">
-                                       New Products with updated stocks
+                                        New Products with updated stocks
                                     </p>
                                 </div>
                                 <Button className="viewAllBtn ml-auto">
@@ -223,7 +196,7 @@ const ProductItem = () => {
                             <div className="product_row w-100">
                                 <Swiper
                                     modules={[Navigation, Pagination, Autoplay]}
-                                    navigation  
+                                    navigation
                                     // pagination={{ clickable: true }}
                                     autoplay={{ delay: 1800 }}
                                     spaceBetween={20}
@@ -245,7 +218,7 @@ const ProductItem = () => {
                                                         <Button>
                                                             <TfiFullscreen />
                                                         </Button><br />
-                                                        <Button><IoMdHeartEmpty  style={{fontsize:'20px'}}/></Button>
+                                                        <Button><IoMdHeartEmpty style={{ fontsize: '20px' }} /></Button>
                                                     </div>
                                                     <span className="badge">28%</span>
                                                 </div>
@@ -289,13 +262,13 @@ const ProductItem = () => {
                                                         )}
                                                     </div>
                                                     <Button
-                                                        className="rounded-5 SlidBtn px-4 py-1 mt-4 ms-1"
+                                                        className="rounded-5 SlidBtn px-4 py-1 mt-4 "
                                                         style={{
                                                             backgroundColor: "white",
                                                             borderColor: "blue",
                                                             border: "1px solid blue",
                                                             color: "blue",
-                                                            width: "170px",
+                                                            width: "160px",
 
                                                         }}
                                                     > {item.button}
@@ -307,18 +280,8 @@ const ProductItem = () => {
                                 </Swiper>
                             </div>
                         </div>
+                        </div>
 
-
-                        
-                    </div>
-                </div>
-            </section>
-
-            
-
-
-
-            
         </>
     )
 }
