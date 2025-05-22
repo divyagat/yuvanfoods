@@ -389,3 +389,141 @@ text-transform: capitalize !important;}
 .viewAllBtn svg{font-size: 20px;}
 
 .productItem{width: 100%; height: auto; border: 1px solid rgba(0,0,0,0.1);}
+
+.price {
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+.price span {
+  margin-right: 8px;
+}
+.rating{
+    color: yellow;
+}
+.product_row .productItem {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  min-height: 420px;
+}
+
+.product_row .imgWrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product_row .imgWrapper img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.product_row .productContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product_row .productContent h5.title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.product_row .price {
+  margin-top: 8px;
+}
+
+.product_row button {
+  align-self: flex-start;
+  background-color: #f57224;
+  color: #fff;
+  border: none;
+  transition: 0.3s;
+}
+
+.product_row button:hover {
+  background-color: #d35400;
+}
+
+.product_row .rating svg {
+  font-size: 18px;
+  color: gold;
+}
+.swiper-slide {
+  height: auto !important;
+}
+
+.SlidBtn{
+    background-color: #ccc;
+    border-color: blue;
+
+    color: blue;
+}
+.productItem{
+    position: relative;
+}
+.badge{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: #2bbef9;
+    border-radius: none;
+
+}
+.productItem .imgWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.productItem .actions {
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  width: 50px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 5; 
+  transition: all 0.5s;
+}
+.productItem .actions Button{
+      background:white ;
+      color: blue;
+       align-items: center; justify-content: center;
+    min-width: 40px !important; height: 40px !important; width: 40px !important; border: 1px solid
+    rgba(215, 76, 76, 0.1) !important; border-radius: 50% !important; background: white !important;
+box-shadow: 0 px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 /24%) !important; transition: all
+0.0s !important;}
+
+.productItem .actions Button svg{
+    color: #000 !important; opacity: 0.8; pointer-events: none; font-size: 15px !important;
+}
+
+.productItem .actions Button :hover{
+    background: rgb(25, 25, 143);
+}
+.productItem .actions Button svg :hover{
+    color: #fff !important;
+}
+
+.productItem .imgWrapper{overflow: hidden;}
+.productItem .imgWrapper img{transition: all 0.3s ease-in-out;}
+.productItem .imgWrapper:hover .actions{ opacity: 1 ; right: 10px;}
+.productItem .imgWrapper:hover img{transform: scale(1.1);}
+
+
+.productItem .imgWrapper:hover .actions {
+  opacity: 1;
+}
+
+
