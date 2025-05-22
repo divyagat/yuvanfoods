@@ -23,46 +23,35 @@
     /* border: 1px solid red;? */
     /* overflow: hidden; */
 }
-
-
-
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
 }
-
 ::-webkit-scrollbar-thumb {
     background: #ccc;
 }
-
 ::-webkit-scrollbar-track {
     background: transparent;
 }
-
 .top-strip {
     background: rgb(0, 4, 255);
 }
-
 .headerWrapper .top-strip {
     padding: 8px 0px;
 }
-
 .headerWrapper .top-strip p {
     color: white;
     font-size: 12px;
     font-weight: 700;
 }
-
 .headerWrapper .header {
     width: 100%;
     height: auto;
     padding: 15px 0px;
 }
-
 .logoWrapper img {
     width: 45%;
 }
-
 .headerWrapper .header .part2 .countryDrop {
     width: 150px;
     height: auto;
@@ -75,14 +64,12 @@
     border-radius: 5px;
     border: 1px solid rgb(209, 204, 204);
 }
-
 .headerWrapper .header .part2 .countryDrop .label {
     font-size: 15px !important;
     text-transform: capitalize !important;
     color: rgba(65, 62, 62, 0.7) !important;
     /* line-height: 16px; */
 }
-
 .headerWrapper .header .part2 .countryDrop .name {
     /* font-size: 18px !important; */
     text-transform: capitalize !important;
@@ -90,7 +77,6 @@
     font-weight: 700;
     /* line-height: 16px; */
 }
-
 .headerSearch {
     width: 60%;
     height: 56px;
@@ -100,7 +86,6 @@
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.2);
 }
-
 .headerSearch input {
     background: transparent !important;
     outline: none !important;
@@ -111,7 +96,6 @@
     border: 0px;
     padding: 0px 20px;
 }
-
 .headerSearch button {
     position: absolute;
     top: 8px;
@@ -124,15 +108,12 @@
     border-radius: 50% !important;
     color: #000;
 }
-
 .headerSearch button svg {
     font-size: 22px;
 }
-
 header .part3 {
     gap: 20px;
 }
-
 header .part3 .circle {
     align-items: center;
     justify-content: center;
@@ -143,7 +124,6 @@ header .part3 .circle {
     border: 1px solid rgba(0, 0, 0, 0.2);
     color: #000;
 }
-
 header .part3 .circle svg {
     font-size: 22px;
 }
