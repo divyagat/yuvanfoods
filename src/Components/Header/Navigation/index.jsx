@@ -10,7 +10,7 @@ const Navigation = () => {
 
   return (
     <nav>
-      <div className="container">
+      <div className="container mb-4">
         <div className="row">
           {/* Left Section: All Categories Button */}
           <div className="col-sm-3 navPart1">
@@ -57,14 +57,6 @@ const Navigation = () => {
                 <Link to="/"><Button>Footwear</Button></Link>
                 <Link to="/"><Button>Watches</Button></Link>
               </div>
-              <li className="list-inline-item position-relative">
-                <Link to="/"><Button>Men</Button></Link>
-                <div className="submenu shadow">
-                  <Link to="/"><Button>Clothing</Button></Link>
-                  <Link to="/"><Button>Footwear</Button></Link>
-                  <Link to="/"><Button>Watches</Button></Link>
-                </div>
-              </li>
               <li className="list-inline-item "><Link to="/">Women</Link>
                 <div className="submenu shadow">
                   <Link to="/"><Button>Clothing</Button></Link>
