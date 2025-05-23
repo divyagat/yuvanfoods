@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './Components/Header/index';
 import axios from 'axios';
 import Home from './Pages/Home/index';
+import Footer from './Components/Footer';
 
 const MyContext = createContext();
 function App() {
@@ -36,6 +37,7 @@ const [selectedCountry, setselectedCountry] = useState("");
           {/* Define your routes here */}
           <Route path='/' element={<Home/>}/>
         </Routes>
+      <Footer/>
       </MyContext.Provider>
     </BrowserRouter>
   );
