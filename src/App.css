@@ -1,21 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Tagesschrift&display=swap');
-
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
-
 
 .cursor {
     cursor: pointer
 }
-
 .text-light1 {
     color: #979393 !important;
 }
-
 .text-sml {
     font-size: 14px;
 }
-
 * {
     margin: 0px;
     padding: 0px;
@@ -141,7 +136,6 @@ header .part3 .circle svg {
     color: rgba(0, 0, 0, 0.8);
     font-weight: 500;
 }
-
 .cartTab .count {
     position: absolute;
     top: -8px;
@@ -158,34 +152,26 @@ nav .allCatTab {
     padding: 8px 20px;
     border-radius: 30px;
     border: none;
-
 }
-
 nav .allCatTab * {
     color: #fff;
 }
-
 nav .allCatTab:hover {
     background: #2bbef9;
 }
-
 nav .allCatTab .text {
     font-weight: 600;
 }
-
 nav .allCatTab .icon1 svg {
     font-size: 22px;
 }
-
 nav .allCatTab .icon1 svg {
     font-size: 22px;
 }
-
 .locationModal .MuiPaper-elevation {
     padding: 25px;
     position: relative;
 }
-
 .locationModal .countryList {
     margin-bottom: 0px;
     max-height: 400px;
@@ -194,19 +180,16 @@ nav .allCatTab .icon1 svg {
     padding-left: 0px;
     padding: 10px;
 }
-
 .locationModal .countryList li {
     width: 100%;
     list-style: none;
 }
-
 .locationModal .countryList li button {
     width: 100%;
     text-transform: capitalize;
     color: #000;
     justify-content: flex-start !important;
     border: none;
-
 }
 
 .locationModal .close_ {
@@ -219,15 +202,12 @@ nav .allCatTab .icon1 svg {
     height: 40px;
     border-radius: 50%;
 }
-
 .locationModal .close_ svg {
     font-size: 25px;
 }
-
 nav .navPart2 ul {
     margin-bottom: 0px;
 }
-
 nav .navPart2 ul li a {
     font-size: 15px;
     text-decoration: none;
@@ -240,23 +220,19 @@ nav .navPart2 ul li a {
     transition: all 0.2s ease-in-out;
     border-radius: 25px;
 }
-
 nav .navPart2 ul li a:hover {
     background: #f0faff;
     color: #2bbef9;
 }
-
 nav .navPart2 ul li {
     position: relative;
     padding-bottom: 15px;
 }
-
 nav .navPart2 ul li:hover .submenu {
     opacity: 1;
     visibility: inherit;
     top: 100%;
 }
-
 nav .navPart2 ul li .submenu {
     z-index: 100;
     position: absolute;
@@ -268,13 +244,11 @@ nav .navPart2 ul li .submenu {
     visibility: hidden;
     transition: all 0.2s ease-in-out;
 }
-
 nav .navPart2 ul li .submenu a {
     display: block;
     width: 100%;
 
 }
-
 nav .navPart2 ul li .submenu a button {
     width: 100%;
     justify-content: flex-start;
@@ -282,12 +256,10 @@ nav .navPart2 ul li .submenu a button {
     text-transform: capitalize;
     font-weight: 600;
 }
-
 nav .navPart2 ul li .submenu a button:hover {
     background: #f1f1f1;
     width: 100%;
 }
-
 nav .navPart1 {
     max-width: 20%;
     flex: 0 0 20%;
@@ -397,7 +369,7 @@ nav .navPart1 .catWrapper .sidebarNav ul li button:hover {
     border-radius: 7px;
     border: 1px solid #000;
     overflow: hidden;
-    height: 70vh;
+    height: 61vh;
 }
 
 .homeProducts .banner img {
@@ -457,6 +429,11 @@ nav .navPart1 .catWrapper .sidebarNav ul li button:hover {
     transition: transform 0.3s ease;
     min-height: 420px;
 }
+.product_row .productItem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
 
 .product_row .imgWrapper {
     width: 100%;
@@ -592,7 +569,76 @@ nav .navPart1 .catWrapper .sidebarNav ul li button:hover {
     transform: scale(1.1);
 }
 
-
 .productItem .imgWrapper:hover .actions {
     opacity: 1;
+}
+
+.newsLetterSection{
+    width: 100%;
+    height: 400px;
+    background:cornflowerblue ;
+}
+
+.newsLetterSection p{
+    font-size: 18px;
+}
+.newsLetterSection h3{
+    font-size: 30px;
+    font-weight: bold;
+}
+.newsLetterSection p.text-ligh{
+    color: #3d3c3c;
+    opacity: 0.5;
+}
+
+.newsLetterSection form{
+    width: 100%;
+    height: 60px;
+    background: white;
+    padding: 10px;
+    position: relative;
+    border-radius: 5px;
+}
+.newsLetterSection form svg{
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    font-size: 25px;
+    opacity: 0.3;
+}
+.newsLetterSection form input{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    outline: none;
+    border: 0px;
+    padding: 0px 200px 0px 40px;
+}
+.newsLetterSection form button{
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    background: cornflowerblue;
+    border: 0px;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+footer{
+    width: 100%;
+    height: 500px;
+    margin: auto;
+    background: #fff;
+    padding: 35px 0px;
+}
+
+footer .topInfo .col svg{
+    font-size: 25px;
+}
+footer .topInfo .col span {
+    font-size: 20px;
 }

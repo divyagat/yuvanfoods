@@ -1,6 +1,3 @@
-
-import React from "react";
-
 import Button from "@mui/material/Button";
 import { GoArrowRight } from "react-icons/go";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -77,10 +74,8 @@ const ProductItem = () => {
             button: "Add to cart"
         }
     ];
-
     return (
         <>
-
             <div className=" productRow">
                 <div className="d-flex align-items-center mb-3">
                     <div className="info w-75">
@@ -111,8 +106,6 @@ const ProductItem = () => {
                         {productData.map((item, idx) => (
                             <SwiperSlide key={idx}>
                                 <div className="item productItem">
-
-
                                     <div className="imgWrapper position-relative">
                                         <img src={item.img} alt={`Product ${idx}`} className="w-100" />
                                         <div className="actions">
@@ -123,11 +116,7 @@ const ProductItem = () => {
                                         </div>
                                         <span className="badge">28%</span>
                                     </div>
-
-
                                     <div className="productContent p-4">
-
-
                                         <h5 className="title">{item.title}</h5>
                                         <p className="subtitle">{item.subtitle}</p>
                                         <div className="rating">
@@ -169,7 +158,7 @@ const ProductItem = () => {
                                                 borderColor: "blue",
                                                 border: "1px solid blue",
                                                 color: "blue",
-                                                width: "160px",
+                                                width: "150px",
                                             }}
                                         > {item.button}
                                         </Button>
@@ -179,7 +168,6 @@ const ProductItem = () => {
                         ))}
                     </Swiper>
                 </div>
-
                 <div className="col-md-9 productRow w-100 ">
                     <div className="d-flex align-items-center justify-content-between ">
                         <div className="info ">
@@ -188,13 +176,12 @@ const ProductItem = () => {
                                 New Products with updated stocks
                             </p>
                         </div>
-                      <div>
-                          <Button className="viewAllBtn ml-auto">
-                            View All <GoArrowRight />
-                        </Button>
-                      </div>
+                        <div>
+                            <Button className="viewAllBtn ml-auto">
+                                View All <GoArrowRight />
+                            </Button>
+                        </div>
                     </div>
-
                     <div className="product_row w-100 mt-3">
                         <Swiper
                             modules={[Navigation, Pagination, Autoplay]}
@@ -212,8 +199,6 @@ const ProductItem = () => {
                             {productData.map((item, idx) => (
                                 <SwiperSlide key={idx}>
                                     <div className="item productItem">
-
-
                                         <div className="imgWrapper position-relative">
                                             <img src={item.img} alt={`Product ${idx}`} className="w-100" />
                                             <div className="actions">
@@ -224,10 +209,7 @@ const ProductItem = () => {
                                             </div>
                                             <span className="badge">28%</span>
                                         </div>
-
-
                                         <div className="productContent p-4">
-
 
                                             <h5 className="title">{item.title}</h5>
                                             <p className="subtitle">{item.subtitle}</p>
