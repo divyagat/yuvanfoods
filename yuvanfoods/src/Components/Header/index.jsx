@@ -1,10 +1,22 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
 import CountryDropdown from '../CountryDropdown';
-import { IoSearchSharp } from "react-icons/io5";
 import Button from '@mui/material/Button';
+import { FiUser } from "react-icons/fi";
+import { IoBagOutline } from "react-icons/io5";
+import SearchBox from './SearchBox';
+import Navigation from './Navigation';
+import { MyContext } from '../../App';
+import { useContext } from 'react';
+
+
 
 const Header = () => {
+
+    const context = useContext(MyContext); 
+
+
+
     return (
         <>
             <div className="header-Wrapper">
@@ -26,23 +38,34 @@ const Header = () => {
                                     <img src={logo} alt="logo" />
                                 </Link>
                             </div>
+
                             <div className="col-sm-10 d-flex align-items-center part2">
+                               
+                                 {
+                                    context.countryList.length!==0 && <CountryDropdown />
+                                 }
+                                
+                                <SearchBox />
 
-                                <CountryDropdown />
 
-
-                                {/* {Header Search Start Here} */}
-                                <div className="headerSearch ml-3 mr-3">
-                                    <input type="text" />
-                                    <Button variant="text"><IoSearchSharp /></Button>
+                                <div className="part3 d-flex align-items-center ml-auto">
+                                    <Button className='circle me-3'><FiUser /></Button>
+                                    <div className="ml-auto cartTab d-flex align-items-center">
+                                        <span className='price'>$0.00</span>
+                                        <div className="position-relative ms-2">
+                                            <Button className='circle '><IoBagOutline /></Button>
+                                            <span className='count d-flex align-items-center
+                                        justify-content-center'>1</span>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                {/* {Header Search Ends Here} */}
 
                             </div>
                         </div>
                     </div>
                 </header>
+                <Navigation/>
+
             </div>
         </>
     );
