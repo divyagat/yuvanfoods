@@ -32,7 +32,7 @@ const Header = () => {
                 {/* Main Header */}
                 <header className="header">
                     <div className="container">
-                        <div className="row">
+                        <div className="row ">
                             <div className="logowrapper d-flex align-items-center col-sm-2">
                                 <Link to="/">
                                     <img src={logo} alt="logo" />
